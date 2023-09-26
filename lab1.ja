@@ -1,0 +1,27 @@
+package uz.mohirdev.lesson.model;
+import java.util.Scanner;
+public class FaruhakaMasalasi {
+                public static void main(String[] args) {
+                    int summa = 0;  // Teng yig'indilarga ega bo'lgan sonlar san'ati
+                    int a = 1000000;  // 6 ta raqamli sonlar miqdori
+
+                    for (int i = 0; i < a; i++) {
+                        int Sum = c(i / 1000);
+                        int Sum1 = c(i % 1000);
+
+                        if (Sum == Sum1) {
+                            summa++;
+                        }
+                    }
+
+                    System.out.println("Teng yig'indilarga ega bo'lgan sonlar soni: " + summa);
+                }
+
+                private static int c(int num) {
+                    int sum = 0;
+                    while (num != 0) {
+                        sum += num % 10;
+                        num /= 10;
+                    }
+                    return sum;
+                }
